@@ -1,0 +1,9 @@
+.copy-right {
+    padding: 5px 0px;
+    background-color: #343a40   ;
+    color: #FFF;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin-bottom: 0;
+}

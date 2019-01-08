@@ -1,0 +1,35 @@
+<div>
+  <app-header></app-header>
+
+  <div class="container pb-4 pt-4">
+    <div class="row row">
+      <div class="col-12">
+              <h2> User Details <button class="btn btn-danger float-right" routerLink="/add"> Add User</button></h2>
+              <div class="clearfix"></div>
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th class="hidden">Id</th>
+                  <th>FirstName</th>
+                  <th>LastName</th>
+                  <th>Email</th>
+                  <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let user of fakeUsers">
+                  <td class="hidden">{{user.id}}</td>
+                  <td>{{user.firstName}}</td>
+                  <td>{{user.lastName}}</td>
+                  <td>{{user.email}}</td>
+                  <td><button class="btn btn-danger" (click)="deleteUser(user.id)"> Delete</button>
+                    <button class="btn btn-danger" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
+                </tr>
+                </tbody>
+              </table>
+      </div>
+    </div>
+  </div>
+
+  <app-footer>></app-footer>
+</div>
